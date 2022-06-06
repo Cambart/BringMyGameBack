@@ -27,8 +27,8 @@ class DashboardActivity : AppCompatActivity() {
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            Snackbar.make(view, R.string.dashboard_addBoardGames, Snackbar.LENGTH_LONG)
+                .setAction(R.string.dashboard_addAction, null).show()
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
@@ -37,7 +37,7 @@ class DashboardActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_my_board_games, R.id.nav_profile, R.id.nav_add_board_games
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
